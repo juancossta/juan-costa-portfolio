@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Lucas Costa Advocacia",
+    "category": "WEB",
+    "github": "https://github.com/juancossta/LucasCostaadvocacia"
+  },
+
+  {
+    "title": "JBC Contabilidade",
+    "category": "WEB",
+    "github": "https://github.com/juancossta/jbc-contabilidade-lp"
+  },
+
+  {
+    "title": "Controle Financeiro",
+    "category": "DASHBOARD",
+    "github": "https://github.com/juancossta/Controlefincanceiro"
+  },
+
+  {
+    "title": "Dashboard Big Data",
+    "category": "BI",
+    "status": "EM DESENVOLVIMENTO"
+  }
+]

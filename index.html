@@ -1,248 +1,585 @@
+<!-- =========================
+     INDEX.HTML
+========================= -->
+
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Costa | Desenvolvedor & Soluções Tech</title>
-    
-    <!-- Tailwind CSS (via CDN para facilitar, mas configurado) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: '#0a0a0f',
-                        darker: '#050507',
-                        neon: '#3b82f6',
-                        neonGlow: 'rgba(59, 130, 246, 0.5)'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
 
-    <!-- Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
 
-    <!-- Seu arquivo CSS externo -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-    <!-- Bibliotecas Externas -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <title>
+    Juan Costa | Portfolio
+  </title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/scrollbar.css">
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
 </head>
-<body class="font-sans antialiased selection:bg-neon selection:text-white">
 
-    <!-- Background Grid -->
-    <div class="bg-grid"></div>
+<body>
 
-    <!-- Loading Screen -->
-    <div id="loader">
-        <div class="flex flex-col items-center gap-4">
-            <div class="spinner"></div>
-            <p class="font-mono text-neon text-sm tracking-widest uppercase">Inicializando Sistema...</p>
-        </div>
+  <!-- LOADER -->
+  <div id="loader">
+
+    <div class="loader-circle"></div>
+
+    <p>
+      INITIALIZING
+    </p>
+
+  </div>
+
+  <!-- GRID -->
+  <div class="grid-background"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+
+    <div class="navbar-container">
+
+      <div class="logo">
+        JUAN COSTA
+      </div>
+
+      <nav>
+
+        <a href="#about">
+          Sobre
+        </a>
+
+        <a href="#projects">
+          Projetos
+        </a>
+
+        <a href="#stack">
+          Stack
+        </a>
+
+        <a href="#contact">
+          Contato
+        </a>
+
+      </nav>
+
     </div>
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="font-mono text-xl font-bold text-white tracking-tighter">
-                JUAN<span class="text-neon">.</span>COSTA
-            </a>
-            <div class="hidden md:flex gap-8 font-mono text-sm">
-                <a href="#sobre" class="hover:text-neon transition-colors">01. Sobre</a>
-                <a href="#projetos" class="hover:text-neon transition-colors">02. Projetos</a>
-                <a href="#downloads" class="hover:text-neon transition-colors">03. Executáveis</a>
-                <a href="#contato" class="hover:text-neon transition-colors">04. Contato</a>
-            </div>
-        </div>
-    </nav>
+  </header>
 
-    <!-- HERO SECTION -->
-    <section class="min-h-screen flex items-center justify-center relative pt-20" id="hero">
-        <div class="max-w-4xl mx-auto px-6 text-center reveal">
-            <div class="mb-6 inline-block">
-                <div class="w-24 h-24 mx-auto rounded-full border-2 border-neon p-1 shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=0a0a0f" alt="Juan Costa" class="w-full h-full rounded-full object-cover">
-                </div>
-            </div>
-            <p class="font-mono text-neon mb-4">Olá, mundo. Eu sou</p>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-white tracking-tight">Juan Costa</h1>
-            <h2 class="text-2xl md:text-4xl font-bold text-gray-400 mb-6 h-12">
-                <span id="typed-text"></span>
-            </h2>
-            <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
-                Desenvolvedor focado em automação, análise de dados, interfaces modernas e soluções inteligentes.
-            </p>
-            
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <a href="#projetos" class="px-8 py-3 bg-neon text-white rounded font-mono text-sm hover:bg-blue-600 transition-all shadow-[0_0_15px_rgba(59,130,246,0.4)]">
-                    <i class="fa-solid fa-code mr-2"></i> Ver Projetos
-                </a>
-                <a href="#contato" class="px-8 py-3 glass text-white rounded font-mono text-sm hover:border-neon transition-all">
-                    <i class="fa-regular fa-envelope mr-2"></i> Contato
-                </a>
-            </div>
+  <!-- HERO -->
+  <section class="hero">
 
-            <div class="flex justify-center gap-6 text-gray-400 text-xl">
-                <a href="#" class="hover:text-neon hover:-translate-y-1 transition-all"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="hover:text-neon hover:-translate-y-1 transition-all"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="hover:text-neon hover:-translate-y-1 transition-all"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-        </div>
-    </section>
+    <div class="hero-content reveal">
 
-    <!-- SOBRE SECTION -->
-    <section class="py-24 relative" id="sobre">
-        <!-- ... (Conteúdo da seção Sobre permanece igual) ... -->
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 reveal">
-                <span class="font-mono text-neon text-xl">01.</span> Sobre Mim
-                <div class="h-[1px] bg-gray-800 flex-1"></div>
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="text-gray-400 space-y-4 leading-relaxed reveal">
-                    <p>Atuando na interseção entre desenvolvimento de software, análise de dados e rotinas corporativas, construo soluções que otimizam processos e resolvem problemas reais.</p>
-                    <p>Minha base em Análise e Desenvolvimento de Sistemas me permite criar ferramentas desde scripts de automação e páginas web responsivas até soluções robustas com arquiteturas modernas.</p>
-                </div>
-                <div class="grid grid-cols-2 gap-4 reveal">
-                    <div class="glass p-6 rounded-lg text-center">
-                        <i class="fa-solid fa-microchip text-2xl text-neon mb-3"></i>
-                        <h3 class="text-white font-bold mb-1">Desenvolvimento</h3>
-                        <p class="text-xs text-gray-500">Web & Desktop</p>
-                    </div>
-                    <div class="glass p-6 rounded-lg text-center">
-                        <i class="fa-solid fa-robot text-2xl text-neon mb-3"></i>
-                        <h3 class="text-white font-bold mb-1">Automação</h3>
-                        <p class="text-xs text-gray-500">Scripts & Processos</p>
-                    </div>
-                    <div class="glass p-6 rounded-lg text-center">
-                        <i class="fa-solid fa-chart-pie text-2xl text-neon mb-3"></i>
-                        <h3 class="text-white font-bold mb-1">BI & Dados</h3>
-                        <p class="text-xs text-gray-500">Dashboards & Big Data</p>
-                    </div>
-                    <div class="glass p-6 rounded-lg text-center">
-                        <i class="fa-solid fa-shield-halved text-2xl text-neon mb-3"></i>
-                        <h3 class="text-white font-bold mb-1">Cybersecurity</h3>
-                        <p class="text-xs text-gray-500">Segurança & Boas Práticas</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <span class="hero-tag">
+        Desenvolvedor • Automação • Cybersecurity
+      </span>
 
-    <!-- PROJETOS SECTION (ATUALIZADA) -->
-    <section class="py-24 bg-darker/50" id="projetos">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 reveal">
-                <span class="font-mono text-neon text-xl">02.</span> Meus Projetos
-                <div class="h-[1px] bg-gray-800 flex-1"></div>
-            </h2>
+      <h1>
+        Juan Costa
+      </h1>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Projeto 1: Advocacia -->
-                <div class="glass rounded-xl overflow-hidden group reveal relative">
-                    <div class="h-48 bg-gray-800 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-neon/20 group-hover:bg-transparent transition-colors z-10"></div>
-                        <div class="w-full h-full flex items-center justify-center bg-gray-900 font-mono text-gray-700 text-3xl">ADVOCACIA</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-neon transition-colors">Lucas Costa Advocacia</h3>
-                        <p class="text-sm text-gray-400 mb-4 h-16">Landing page moderna e responsiva focada em conversão para escritório de advocacia.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs font-mono text-neon bg-neon/10 px-2 py-1 rounded">HTML</span>
-                            <span class="text-xs font-mono text-neon bg-neon/10 px-2 py-1 rounded">CSS/JS</span>
-                        </div>
-                        <div class="flex gap-3">
-                            <a href="https://lucas-costaadvocacia.vercel.app/" target="_blank" class="text-gray-400 hover:text-white transition-colors" title="Acessar Site"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
-                        </div>
-                    </div>
-                </div>
+      <h2 id="typing"></h2>
 
-                <!-- Projeto 2: JBC Contabilidade -->
-                <div class="glass rounded-xl overflow-hidden group reveal relative delay-100">
-                    <div class="h-48 bg-gray-800 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-neon/20 group-hover:bg-transparent transition-colors z-10"></div>
-                        <div class="w-full h-full flex items-center justify-center bg-gray-900 font-mono text-gray-700 text-3xl">JBC CONTÁBIL</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-neon transition-colors">JBC Contabilidade</h3>
-                        <p class="text-sm text-gray-400 mb-4 h-16">Site institucional desenvolvido para apresentar soluções contábeis e corporativas de forma clara e profissional.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs font-mono text-neon bg-neon/10 px-2 py-1 rounded">HTML</span>
-                            <span class="text-xs font-mono text-neon bg-neon/10 px-2 py-1 rounded">Tailwind</span>
-                        </div>
-                        <div class="flex gap-3">
-                            <a href="https://juancossta.github.io/jbc-contabilidade-lp/" target="_blank" class="text-gray-400 hover:text-white transition-colors" title="Acessar Site"><i class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
-                        </div>
-                    </div>
-                </div>
+      <p class="hero-description">
 
-                <!-- Projeto 3: Big Data -->
-                <div class="glass rounded-xl overflow-hidden group reveal relative delay-200">
-                    <div class="h-48 bg-gray-800 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-neon/20 group-hover:bg-transparent transition-colors z-10"></div>
-                        <div class="w-full h-full flex items-center justify-center bg-gray-900 font-mono text-gray-700 text-3xl">BIG DATA</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-neon transition-colors">Dashboard Big Data</h3>
-                        <p class="text-sm text-gray-400 mb-4 h-16">Coleta, tratamento e visualização avançada de grandes volumes de dados para tomada de decisão.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs font-mono text-neon bg-neon/10 px-2 py-1 rounded">Power BI</span>
-                            <span class="text-xs font-mono text-neon bg-neon/10 px-2 py-1 rounded">Dados</span>
-                        </div>
-                        <div class="flex gap-3">
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        Desenvolvedor focado em automação,
+        análise de dados, interfaces modernas
+        e soluções inteligentes.
 
-    <!-- EXECUTÁVEIS / DOWNLOADS -->
-    <section class="py-24 relative" id="downloads">
-        <div class="max-w-4xl mx-auto px-6 reveal">
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-4">
-                <span class="font-mono text-neon text-xl">03.</span> Central de Downloads
-                <div class="h-[1px] bg-gray-800 flex-1"></div>
-            </h2>
-            <p class="text-gray-400 mb-8">Aplicativos desktop e ferramentas utilitárias prontas para uso.</p>
+      </p>
 
-            <div class="space-y-4">
-                <div class="glass p-6 rounded-lg flex flex-col md:flex-row items-center justify-between gap-4 hover:border-neon/50 transition-all">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-800 rounded flex items-center justify-center text-neon">
-                            <i class="fa-brands fa-windows text-2xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold">Automador - Utilitário</h4>
-                            <p class="text-xs text-gray-500 font-mono">v1.0.0 • Electron</p>
-                        </div>
-                    </div>
-                    <a href="#" class="px-6 py-2 border border-neon text-neon rounded hover:bg-neon hover:text-white transition-all font-mono text-sm w-full md:w-auto text-center">
-                        <i class="fa-solid fa-download mr-2"></i> Baixar .exe
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+      <!-- BUTTONS -->
+      <div class="hero-buttons">
 
-    <!-- FOOTER -->
-    <footer class="py-8 border-t border-gray-800 text-center">
-        <p class="font-mono text-sm text-gray-500">
-            Site em desenvolvimento por <span class="text-neon">Juan Costa</span> &copy; 2026
+        <a
+          href="#projects"
+          class="btn-primary"
+        >
+
+          Ver Projetos
+
+        </a>
+
+        <a
+          href="#contact"
+          class="btn-secondary"
+        >
+
+          Contato
+
+        </a>
+
+      </div>
+
+      <!-- SOCIALS -->
+      <div class="socials">
+
+        <!-- GITHUB -->
+        <a
+          href="https://github.com/juancossta"
+          target="_blank"
+        >
+
+          <i class="fa-brands fa-github"></i>
+
+        </a>
+
+        <!-- EMAIL -->
+        <a
+          href="mailto:juancosta.0405@gmail.com"
+        >
+
+          <i class="fa-solid fa-envelope"></i>
+
+        </a>
+
+        <!-- WHATS -->
+        <a
+          href="https://wa.me/5521959405877"
+          target="_blank"
+        >
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section
+    class="section"
+    id="about"
+  >
+
+    <h2 class="section-title">
+      Sobre
+    </h2>
+
+    <div class="cards">
+
+      <div class="card reveal">
+
+        <h3>
+          Desenvolvimento
+        </h3>
+
+        <p>
+          Interfaces modernas e sistemas performáticos.
         </p>
-    </footer>
 
-    <!-- Seu arquivo JS externo -->
-    <script src="js/main.js"></script>
+      </div>
+
+      <div class="card reveal">
+
+        <h3>
+          Automação
+        </h3>
+
+        <p>
+          Processos inteligentes e produtividade.
+        </p>
+
+      </div>
+
+      <div class="card reveal">
+
+        <h3>
+          BI & Dados
+        </h3>
+
+        <p>
+          Visualização e análise estratégica.
+        </p>
+
+      </div>
+
+      <div class="card reveal">
+
+        <h3>
+          Cybersecurity
+        </h3>
+
+        <p>
+          Monitoramento e soluções tecnológicas.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+  <section
+    class="section"
+    id="projects"
+  >
+
+    <h2 class="section-title">
+      Projetos
+    </h2>
+
+    <div class="projects-grid">
+
+      <!-- ADVOCACIA -->
+      <div class="project-card reveal">
+
+        <span class="badge">
+          WEB
+        </span>
+
+        <h3>
+          Lucas Costa Advocacia
+        </h3>
+
+        <p>
+          Landing page profissional moderna
+          desenvolvida para escritório jurídico.
+        </p>
+
+        <div class="project-buttons">
+
+          <!-- SITE -->
+          <a
+            href="https://lucas-costaadvocacia.vercel.app/"
+            target="_blank"
+          >
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            Visualizar
+
+          </a>
+
+          <!-- GITHUB -->
+          <a
+            href="https://github.com/juancossta/LucasCostaadvocacia"
+            target="_blank"
+          >
+
+            <i class="fa-brands fa-github"></i>
+
+            GitHub
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- JBC -->
+      <div class="project-card reveal">
+
+        <span class="badge">
+          WEB
+        </span>
+
+        <h3>
+          JBC Contabilidade
+        </h3>
+
+        <p>
+          Landing page moderna e elegante
+          para empresa contábil.
+        </p>
+
+        <div class="project-buttons">
+
+          <!-- SITE -->
+          <a
+            href="https://juancossta.github.io/jbc-contabilidade-lp/"
+            target="_blank"
+          >
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            Visualizar
+
+          </a>
+
+          <!-- GITHUB -->
+          <a
+            href="https://github.com/juancossta/jbc-contabilidade-lp"
+            target="_blank"
+          >
+
+            <i class="fa-brands fa-github"></i>
+
+            GitHub
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- FINANCEIRO -->
+      <div class="project-card reveal">
+
+        <span class="badge">
+          DASHBOARD
+        </span>
+
+        <h3>
+          Controle Financeiro
+        </h3>
+
+        <p>
+          Sistema moderno para gestão
+          e monitoramento financeiro.
+        </p>
+
+        <div class="project-buttons">
+
+          <a
+            href="https://github.com/juancossta/Controlefincanceiro"
+            target="_blank"
+          >
+
+            <i class="fa-brands fa-github"></i>
+
+            GitHub
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- BIG DATA -->
+      <div class="project-card reveal">
+
+        <span class="badge-dev">
+          EM DESENVOLVIMENTO
+        </span>
+
+        <h3>
+          Dashboard Big Data
+        </h3>
+
+        <p>
+          Plataforma analítica focada
+          em monitoramento inteligente,
+          visualização de dados e segurança.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STACK -->
+  <section
+    class="section"
+    id="stack"
+  >
+
+    <h2 class="section-title">
+      Stack Tecnológica
+    </h2>
+
+    <div class="stack-grid">
+
+      <div class="stack-card">
+        JavaScript
+      </div>
+
+      <div class="stack-card">
+        Python
+      </div>
+
+      <div class="stack-card">
+        TailwindCSS
+      </div>
+
+      <div class="stack-card">
+        Electron
+      </div>
+
+      <div class="stack-card">
+        Node.js
+      </div>
+
+      <div class="stack-card">
+        Git
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section
+    class="section"
+    id="contact"
+  >
+
+    <h2 class="section-title">
+      Contato
+    </h2>
+
+    <div class="contact-grid">
+
+      <!-- INFO -->
+      <div class="contact-info reveal">
+
+        <h3>
+          Vamos criar algo grande.
+        </h3>
+
+        <p>
+
+          Aberto para projetos,
+          automações, dashboards
+          e soluções modernas.
+
+        </p>
+
+        <div class="contact-item">
+
+          <i class="fa-solid fa-envelope"></i>
+
+          <span>
+            juancosta.0405@gmail.com
+          </span>
+
+        </div>
+
+        <div class="contact-item">
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+          <span>
+            +55 21 95940-5877
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- FORM -->
+      <form
+        action="https://formsubmit.co/juancosta.0405@gmail.com"
+        method="POST"
+        class="contact-form reveal"
+      >
+
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false"
+        >
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Seu nome"
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Seu email"
+        >
+
+        <textarea
+          name="message"
+          placeholder="Digite sua mensagem..."
+        ></textarea>
+
+        <button type="submit">
+          Enviar Mensagem
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-content">
+
+      <h3>
+        Juan Costa
+      </h3>
+
+      <p>
+
+        Desenvolvendo interfaces modernas,
+        automações inteligentes e soluções tecnológicas.
+
+      </p>
+
+      <div class="footer-socials">
+
+        <!-- GITHUB -->
+        <a
+          href="https://github.com/juancossta"
+          target="_blank"
+        >
+
+          <i class="fa-brands fa-github"></i>
+
+        </a>
+
+        <!-- EMAIL -->
+        <a
+          href="mailto:juancosta.0405@gmail.com"
+        >
+
+          <i class="fa-solid fa-envelope"></i>
+
+        </a>
+
+        <!-- WHATS -->
+        <a
+          href="https://wa.me/5521959405877"
+          target="_blank"
+        >
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+      </div>
+
+      <span>
+        © 2026 Juan Costa — All rights reserved
+      </span>
+
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="./js/typing.js"></script>
+  <script src="./js/app.js"></script>
+
 </body>
 </html>
