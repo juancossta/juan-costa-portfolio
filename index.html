@@ -8,15 +8,28 @@
 <head>
 
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <!-- ═══════════════════════════
+       SEO META TAGS
+  ════════════════════════════ -->
+  <title>Juan Costa | Desenvolvedor & Automação</title>
+  <meta name="description" content="Desenvolvedor focado em automação, análise de dados, interfaces modernas e soluções inteligentes. Estudante de ADS, 22 anos, Rio de Janeiro." />
+  <meta name="author" content="Juan Costa" />
+  <meta name="keywords" content="desenvolvedor, automação, dashboard, landing page, electron, python, javascript, RJ" />
 
-  <title>
-    Juan Costa | Portfolio
-  </title>
+  <!-- OPEN GRAPH (preview ao compartilhar o link) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://juan-costa-portfolio.vercel.app/" />
+  <meta property="og:title" content="Juan Costa | Desenvolvedor & Automação" />
+  <meta property="og:description" content="Desenvolvedor focado em automação, interfaces modernas e soluções inteligentes. Confira meus projetos." />
+  <meta property="og:image" content="https://juan-costa-portfolio.vercel.app/assets/og-image.png" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Juan Costa | Desenvolvedor & Automação" />
+  <meta name="twitter:description" content="Desenvolvedor focado em automação, interfaces modernas e soluções inteligentes." />
+  <meta name="twitter:image" content="https://juan-costa-portfolio.vercel.app/assets/og-image.png" />
 
   <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -32,19 +45,70 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
 
+  <!-- PREVIEW IMAGE STYLES -->
+  <style>
+    .project-preview {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .project-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.5s ease;
+      filter: brightness(0.85);
+    }
+    .project-card:hover .project-preview img {
+      transform: scale(1.04);
+      filter: brightness(1);
+    }
+    .project-preview-placeholder {
+      width: 100%;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0d1b2a, #1a2744);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 36px;
+      opacity: 0.6;
+    }
+    .section-subtitle {
+      color: #9ca3af;
+      font-size: 15px;
+      line-height: 1.8;
+      max-width: 640px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+    .card-icon {
+      font-size: 22px;
+      color: #60a5fa;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .contact-item a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-item a:hover {
+      color: #60a5fa;
+    }
+  </style>
+
 </head>
 
 <body>
 
   <!-- LOADER -->
   <div id="loader">
-
     <div class="loader-circle"></div>
-
-    <p>
-      INITIALIZING
-    </p>
-
+    <p>INITIALIZING</p>
   </div>
 
   <!-- GRID -->
@@ -52,179 +116,104 @@
 
   <!-- NAVBAR -->
   <header class="navbar">
-
     <div class="navbar-container">
-
-      <div class="logo">
-        JUAN COSTA
-      </div>
-
+      <div class="logo">JUAN COSTA</div>
       <nav>
-
-        <a href="#about">
-          Sobre
-        </a>
-
-        <a href="#projects">
-          Projetos
-        </a>
-
-        <a href="#stack">
-          Stack
-        </a>
-
-        <a href="#contact">
-          Contato
-        </a>
-
+        <a href="#about">Sobre</a>
+        <a href="#projects">Projetos</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contato</a>
       </nav>
-
     </div>
-
   </header>
 
   <!-- HERO -->
   <section class="hero">
-
     <div class="hero-content reveal">
 
       <span class="hero-tag">
         Desenvolvedor • Automação • Cybersecurity
       </span>
 
-      <h1>
-        Juan Costa
-      </h1>
+      <h1>Juan Costa</h1>
 
       <h2 id="typing"></h2>
 
       <p class="hero-description">
-
         Desenvolvedor focado em automação,
         análise de dados, interfaces modernas
         e soluções inteligentes.
-
       </p>
 
-      <!-- BUTTONS -->
       <div class="hero-buttons">
-
-        <a
-          href="#projects"
-          class="btn-primary"
-        >
-
-          Ver Projetos
-
-        </a>
-
-        <a
-          href="#contact"
-          class="btn-secondary"
-        >
-
-          Contato
-
-        </a>
-
+        <a href="#projects" class="btn-primary">Ver Projetos</a>
+        <a href="#contact" class="btn-secondary">Contato</a>
       </div>
 
-      <!-- SOCIALS -->
       <div class="socials">
-
-        <!-- GITHUB -->
-        <a
-          href="https://github.com/juancossta"
-          target="_blank"
-        >
-
+        <a href="https://github.com/juancossta" target="_blank" title="GitHub">
           <i class="fa-brands fa-github"></i>
-
         </a>
-
-        <!-- EMAIL -->
-        <a
-          href="mailto:juancosta.0405@gmail.com"
-        >
-
+        <a href="mailto:juancosta.0405@gmail.com" title="Email">
           <i class="fa-solid fa-envelope"></i>
-
         </a>
-
-        <!-- WHATS -->
-        <a
-          href="https://wa.me/5521959405877"
-          target="_blank"
-        >
-
+        <a href="https://wa.me/5521959405877" target="_blank" title="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
-
         </a>
-
       </div>
 
     </div>
-
   </section>
 
   <!-- ABOUT -->
-  <section
-    class="section"
-    id="about"
-  >
+  <section class="section" id="about">
 
-    <h2 class="section-title">
-      Sobre
-    </h2>
+    <h2 class="section-title">Sobre</h2>
+
+    <!-- PARÁGRAFO PESSOAL -->
+    <p class="section-subtitle reveal">
+      22 anos, Rio de Janeiro. Estou no penúltimo período de Análise e Desenvolvimento de Sistemas
+      e já transformo esse conhecimento em produtos reais — sites, dashboards e ferramentas
+      que resolvem problemas de verdade. Cada linha de código que escrevo é movida pela
+      gratidão de acordar com saúde e pela vontade de crescer um dia de cada vez.
+    </p>
 
     <div class="cards">
 
       <div class="card reveal">
-
-        <h3>
-          Desenvolvimento
-        </h3>
-
+        <i class="fa-solid fa-code card-icon"></i>
+        <h3>Desenvolvimento</h3>
         <p>
-          Interfaces modernas e sistemas performáticos.
+          Interfaces modernas, responsivas e performáticas.
+          Do layout ao deploy, entrego produtos completos.
         </p>
-
       </div>
 
       <div class="card reveal">
-
-        <h3>
-          Automação
-        </h3>
-
+        <i class="fa-solid fa-robot card-icon"></i>
+        <h3>Automação</h3>
         <p>
-          Processos inteligentes e produtividade.
+          Scripts e sistemas que eliminam trabalho repetitivo
+          e maximizam a produtividade de qualquer processo.
         </p>
-
       </div>
 
       <div class="card reveal">
-
-        <h3>
-          BI & Dados
-        </h3>
-
+        <i class="fa-solid fa-chart-line card-icon"></i>
+        <h3>BI & Dados</h3>
         <p>
-          Visualização e análise estratégica.
+          Dashboards, visualizações e análises estratégicas
+          que transformam dados em decisões inteligentes.
         </p>
-
       </div>
 
       <div class="card reveal">
-
-        <h3>
-          Cybersecurity
-        </h3>
-
+        <i class="fa-solid fa-shield-halved card-icon"></i>
+        <h3>Cybersecurity</h3>
         <p>
-          Monitoramento e soluções tecnológicas.
+          Monitoramento, boas práticas e soluções focadas
+          em segurança, privacidade e proteção de dados.
         </p>
-
       </div>
 
     </div>
@@ -232,138 +221,103 @@
   </section>
 
   <!-- PROJECTS -->
-  <section
-    class="section"
-    id="projects"
-  >
+  <section class="section" id="projects">
 
-    <h2 class="section-title">
-      Projetos
-    </h2>
+    <h2 class="section-title">Projetos</h2>
 
     <div class="projects-grid">
 
-      <!-- ADVOCACIA -->
+      <!-- LUCAS COSTA ADVOCACIA -->
       <div class="project-card reveal">
 
-        <span class="badge">
-          WEB
-        </span>
+        <!-- PREVIEW -->
+        <div class="project-preview">
+          <img
+            src="./assets/img/preview-lucas.png"
+            alt="Lucas Costa Advocacia — preview"
+            loading="lazy"
+          />
+        </div>
 
-        <h3>
-          Lucas Costa Advocacia
-        </h3>
+        <span class="badge">WEB</span>
+
+        <h3>Lucas Costa Advocacia</h3>
 
         <p>
-          Landing page profissional moderna
-          desenvolvida para escritório jurídico.
+          Landing page para escritório jurídico no RJ —
+          identidade visual premium com foco em conversão
+          via WhatsApp e agendar consulta.
         </p>
 
         <div class="project-buttons">
-
-          <!-- SITE -->
-          <a
-            href="https://lucas-costaadvocacia.vercel.app/"
-            target="_blank"
-          >
-
+          <a href="https://lucas-costaadvocacia.vercel.app/" target="_blank">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
             Visualizar
-
           </a>
-
-          <!-- GITHUB -->
-          <a
-            href="https://github.com/juancossta/LucasCostaadvocacia"
-            target="_blank"
-          >
-
+          <a href="https://github.com/juancossta/LucasCostaadvocacia" target="_blank">
             <i class="fa-brands fa-github"></i>
-
             GitHub
-
           </a>
-
         </div>
 
       </div>
 
-      <!-- JBC -->
+      <!-- JBC CONTABILIDADE -->
       <div class="project-card reveal">
 
-        <span class="badge">
-          WEB
-        </span>
+        <!-- PREVIEW -->
+        <div class="project-preview">
+          <img
+            src="./assets/img/preview-jbc.png"
+            alt="JBC Contabilidade — preview"
+            loading="lazy"
+          />
+        </div>
 
-        <h3>
-          JBC Contabilidade
-        </h3>
+        <span class="badge">WEB</span>
+
+        <h3>JBC Contabilidade</h3>
 
         <p>
-          Landing page moderna e elegante
-          para empresa contábil.
+          Landing page para empresa contábil em Queimados —
+          com formulário de orçamento, blog de dicas fiscais
+          e mapa integrado para clientes locais.
         </p>
 
         <div class="project-buttons">
-
-          <!-- SITE -->
-          <a
-            href="https://juancossta.github.io/jbc-contabilidade-lp/"
-            target="_blank"
-          >
-
+          <a href="https://juancossta.github.io/jbc-contabilidade-lp/" target="_blank">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
             Visualizar
-
           </a>
-
-          <!-- GITHUB -->
-          <a
-            href="https://github.com/juancossta/jbc-contabilidade-lp"
-            target="_blank"
-          >
-
+          <a href="https://github.com/juancossta/jbc-contabilidade-lp" target="_blank">
             <i class="fa-brands fa-github"></i>
-
             GitHub
-
           </a>
-
         </div>
 
       </div>
 
-      <!-- FINANCEIRO -->
+      <!-- CONTROLE FINANCEIRO -->
       <div class="project-card reveal">
 
-        <span class="badge">
-          DASHBOARD
-        </span>
+        <!-- PREVIEW PLACEHOLDER (sem deploy visual) -->
+        <div class="project-preview-placeholder">📊</div>
 
-        <h3>
-          Controle Financeiro
-        </h3>
+        <span class="badge">DASHBOARD</span>
+
+        <h3>Controle Financeiro</h3>
 
         <p>
-          Sistema moderno para gestão
-          e monitoramento financeiro.
+          Sistema moderno para gestão e monitoramento financeiro
+          pessoal, com categorias, gráficos e visão
+          clara do orçamento.
         </p>
 
         <div class="project-buttons">
-
-          <a
-            href="https://github.com/juancossta/Controlefincanceiro"
-            target="_blank"
-          >
-
+          <a href="https://github.com/juancossta/Controlefincanceiro" target="_blank">
             <i class="fa-brands fa-github"></i>
-
             GitHub
-
           </a>
-
         </div>
 
       </div>
@@ -371,18 +325,17 @@
       <!-- BIG DATA -->
       <div class="project-card reveal">
 
-        <span class="badge-dev">
-          EM DESENVOLVIMENTO
-        </span>
+        <!-- PREVIEW PLACEHOLDER -->
+        <div class="project-preview-placeholder">🛰️</div>
 
-        <h3>
-          Dashboard Big Data
-        </h3>
+        <span class="badge-dev">EM DESENVOLVIMENTO</span>
+
+        <h3>Dashboard Big Data</h3>
 
         <p>
-          Plataforma analítica focada
-          em monitoramento inteligente,
-          visualização de dados e segurança.
+          Plataforma analítica focada em monitoramento inteligente,
+          visualização de dados em tempo real e segurança
+          de informações críticas.
         </p>
 
       </div>
@@ -392,39 +345,40 @@
   </section>
 
   <!-- STACK -->
-  <section
-    class="section"
-    id="stack"
-  >
+  <section class="section" id="stack">
 
-    <h2 class="section-title">
-      Stack Tecnológica
-    </h2>
+    <h2 class="section-title">Stack Tecnológica</h2>
 
     <div class="stack-grid">
 
       <div class="stack-card">
-        JavaScript
+        <i class="fa-brands fa-js"></i>
+        <span>JavaScript</span>
       </div>
 
       <div class="stack-card">
-        Python
+        <i class="fa-brands fa-python"></i>
+        <span>Python</span>
       </div>
 
       <div class="stack-card">
-        TailwindCSS
+        <i class="fa-solid fa-wind"></i>
+        <span>TailwindCSS</span>
       </div>
 
       <div class="stack-card">
-        Electron
+        <i class="fa-solid fa-desktop"></i>
+        <span>Electron</span>
       </div>
 
       <div class="stack-card">
-        Node.js
+        <i class="fa-brands fa-node-js"></i>
+        <span>Node.js</span>
       </div>
 
       <div class="stack-card">
-        Git
+        <i class="fa-brands fa-git-alt"></i>
+        <span>Git</span>
       </div>
 
     </div>
@@ -432,85 +386,60 @@
   </section>
 
   <!-- CONTACT -->
-  <section
-    class="section"
-    id="contact"
-  >
+  <section class="section" id="contact">
 
-    <h2 class="section-title">
-      Contato
-    </h2>
+    <h2 class="section-title">Contato</h2>
 
     <div class="contact-grid">
 
-      <!-- INFO -->
       <div class="contact-info reveal">
 
-        <h3>
-          Vamos criar algo grande.
-        </h3>
+        <h3>Vamos criar algo grande.</h3>
 
         <p>
-
-          Aberto para projetos,
-          automações, dashboards
-          e soluções modernas.
-
+          Aberto para projetos, automações,
+          dashboards e soluções modernas.
+          Respondo em até 24h.
         </p>
 
         <div class="contact-item">
-
           <i class="fa-solid fa-envelope"></i>
-
-          <span>
+          <a href="mailto:juancosta.0405@gmail.com">
             juancosta.0405@gmail.com
-          </span>
-
+          </a>
         </div>
 
         <div class="contact-item">
-
           <i class="fa-brands fa-whatsapp"></i>
-
-          <span>
+          <a href="https://wa.me/5521959405877" target="_blank">
             +55 21 95940-5877
-          </span>
+          </a>
+        </div>
 
+        <div class="contact-item">
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/juancossta" target="_blank">
+            github.com/juancossta
+          </a>
         </div>
 
       </div>
 
-      <!-- FORM -->
       <form
         action="https://formsubmit.co/juancosta.0405@gmail.com"
         method="POST"
         class="contact-form reveal"
       >
 
-        <input
-          type="hidden"
-          name="_captcha"
-          value="false"
-        >
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nova mensagem — Portfolio Juan Costa">
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Seu nome"
-        >
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Seu email"
-        >
-
-        <textarea
-          name="message"
-          placeholder="Digite sua mensagem..."
-        ></textarea>
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+        <textarea name="message" placeholder="Conte sobre seu projeto ou ideia..." required></textarea>
 
         <button type="submit">
+          <i class="fa-solid fa-paper-plane"></i>
           Enviar Mensagem
         </button>
 
@@ -522,59 +451,30 @@
 
   <!-- FOOTER -->
   <footer>
-
     <div class="footer-content">
 
-      <h3>
-        Juan Costa
-      </h3>
+      <h3>Juan Costa</h3>
 
       <p>
-
         Desenvolvendo interfaces modernas,
         automações inteligentes e soluções tecnológicas.
-
       </p>
 
       <div class="footer-socials">
-
-        <!-- GITHUB -->
-        <a
-          href="https://github.com/juancossta"
-          target="_blank"
-        >
-
+        <a href="https://github.com/juancossta" target="_blank" title="GitHub">
           <i class="fa-brands fa-github"></i>
-
         </a>
-
-        <!-- EMAIL -->
-        <a
-          href="mailto:juancosta.0405@gmail.com"
-        >
-
+        <a href="mailto:juancosta.0405@gmail.com" title="Email">
           <i class="fa-solid fa-envelope"></i>
-
         </a>
-
-        <!-- WHATS -->
-        <a
-          href="https://wa.me/5521959405877"
-          target="_blank"
-        >
-
+        <a href="https://wa.me/5521959405877" target="_blank" title="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
-
         </a>
-
       </div>
 
-      <span>
-        © 2026 Juan Costa — All rights reserved
-      </span>
+      <span>© 2026 Juan Costa — All rights reserved</span>
 
     </div>
-
   </footer>
 
   <!-- JS -->
